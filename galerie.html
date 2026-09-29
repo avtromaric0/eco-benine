@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Photos - EcoBénin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .galerie-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border: 2px solid var(--eco-green);
+            color: var(--eco-green);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--eco-green);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Eco<span>Bénin</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="circuits.html">Circuits</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="nav-cta">Réserver</a></li>
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Page -->
+    <section style="padding-top: 120px; background: var(--gray-light);">
+        <div class="container" style="text-align: center;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Galerie Photos</h1>
+            <p style="font-size: 1.2rem; color: var(--gray-medium);">Découvrez le Bénin à travers nos plus belles images</p>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section>
+        <div class="container">
+            <div class="galerie-filters">
+                <button class="filter-btn active" data-filter="all">Toutes</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="culture">Culture</button>
+                <button class="filter-btn" data-filter="histoire">Histoire</button>
+                <button class="filter-btn" data-filter="safari">Safari</button>
+            </div>
+
+            <!-- Galerie Grid -->
+            <div class="galerie-grid">
+                
+                <!-- Ganvié -->
+                <div class="galerie-item fade-in" data-category="culture">
+                    <img src="img/sites/ganvie/1.jpg" alt="Ganvié">
+                    <div class="galerie-overlay">
+                        <h3>Ganvié</h3>
+                        <p>Village lacustre</p>
+                    </div>
+                </div>
+
+                <!-- Ouidah -->
+                <div class="galerie-item fade-in" data-category="histoire">
+                    <img src="img/sites/ouidah/1.jpg" alt="Ouidah">
+                    <div class="galerie-overlay">
+                        <h3>Ouidah</h3>
+                        <p>Route des Esclaves</p>
+                    </div>
+                </div>
+
+                <!-- Pendjari -->
+                <div class="galerie-item fade-in" data-category="safari">
+                    <img src="img/sites/pendjari/1.jpg" alt="Pendjari">
+                    <div class="galerie-overlay">
+                        <h3>Parc de la Pendjari</h3>
+                        <p>Safari sauvage</p>
+                    </div>
+                </div>
+
+                <!-- Grand-Popo -->
+                <div class="galerie-item fade-in" data-category="nature">
+                    <img src="img/sites/grand-popo/1.jpg" alt="Grand-Popo">
+                    <div class="galerie-overlay">
+                        <h3>Grand-Popo</h3>
+                        <p>Plage paradisiaque</p>
+                    </div>
+                </div>
+
+                <!-- Lac Ahémé -->
+                <div class="galerie-item fade-in" data-category="nature">
+                    <img src="img/sites/lac-aheme/1.jpg" alt="Lac Ahémé">
+                    <div class="galerie-overlay">
+                        <h3>Lac Ahémé</h3>
+                        <p>Écosystème lagunaire</p>
+                    </div>
+                </div>
+
+                <!-- Possotomé -->
+                <div class="galerie-item fade-in" data-category="nature">
+                    <img src="img/sites/possotome/1.jpg" alt="Possotomé">
+                    <div class="galerie-overlay">
+                        <h3>Possotomé</h3>
+                        <p>Sources thermales</p>
+                    </div>
+                </div>
+
+                <!-- Porto-Novo -->
+                <div class="galerie-item fade-in" data-category="culture">
+                    <img src="img/sites/porto-novo/1.jpg" alt="Porto-Novo">
+                    <div class="galerie-overlay">
+                        <h3>Porto-Novo</h3>
+                        <p>Capitale culturelle</p>
+                    </div>
+                </div>
+
+                <!-- Abomey -->
+                <div class="galerie-item fade-in" data-category="histoire">
+                    <img src="img/sites/abomey/1.jpg" alt="Abomey">
+                    <div class="galerie-overlay">
+                        <h3>Abomey</h3>
+                        <p>Palais Royaux UNESCO</p>
+                    </div>
+                </div>
+
+                <!-- Dassa -->
+                <div class="galerie-item fade-in" data-category="nature">
+                    <img src="img/sites/dassa/1.jpg" alt="Dassa">
+                    <div class="galerie-overlay">
+                        <h3>Dassa</h3>
+                        <p>Ville des 41 collines</p>
+                    </div>
+                </div>
+
+                <!-- Natitingou -->
+                <div class="galerie-item fade-in" data-category="culture">
+                    <img src="img/sites/natitingou/1.jpg" alt="Natitingou">
+                    <div class="galerie-overlay">
+                        <h3>Natitingou</h3>
+                        <p>Porte de l'Atacora</p>
+                    </div>
+                </div>
+
+                <!-- Tata Somba -->
+                <div class="galerie-item fade-in" data-category="culture">
+                    <img src="img/sites/tata-somba/1.jpg" alt="Tata Somba">
+                    <div class="galerie-overlay">
+                        <h3>Tata Somba</h3>
+                        <p>Architecture traditionnelle</p>
+                    </div>
+                </div>
+
+                <!-- Boukoumbé -->
+                <div class="galerie-item fade-in" data-category="culture">
+                    <img src="img/sites/boukoumbe/1.jpg" alt="Boukoumbé">
+                    <div class="galerie-overlay">
+                        <h3>Boukoumbé</h3>
+                        <p>Village authentique</p>
+                    </div>
+                </div>
+
+                <!-- Kota -->
+                <div class="galerie-item fade-in" data-category="nature">
+                    <img src="img/sites/kota/1.jpg" alt="Chutes de Kota">
+                    <div class="galerie-overlay">
+                        <h3>Chutes de Kota</h3>
+                        <p>Cascades sauvages</p>
+                    </div>
+                </div>
+
+                <!-- Tanongou -->
+                <div class="galerie-item fade-in" data-category="nature">
+                    <img src="img/sites/tanongou/1.jpg" alt="Tanongou">
+                    <div class="galerie-overlay">
+                        <h3>Tanongou</h3>
+                        <p>Cascades pittoresques</p>
+                    </div>
+                </div>
+
+                <!-- Parc W -->
+                <div class="galerie-item fade-in" data-category="safari">
+                    <img src="img/sites/parc-w/1.jpg" alt="Parc W">
+                    <div class="galerie-overlay">
+                        <h3>Parc W</h3>
+                        <p>Réserve transfrontalière</p>
+                    </div>
+                </div>
+
+                <!-- Jardin des Plantes -->
+                <div class="galerie-item fade-in" data-category="nature">
+                    <img src="img/sites/jardin-plantes/1.jpg" alt="Jardin des Plantes">
+                    <div class="galerie-overlay">
+                        <h3>Jardin des Plantes</h3>
+                        <p>Jardin botanique</p>
+                    </div>
+                </div>
+
+                <!-- Temple des Pythons -->
+                <div class="galerie-item fade-in" data-category="culture">
+                    <img src="img/sites/temple-pythons/1.jpg" alt="Temple des Pythons">
+                    <div class="galerie-overlay">
+                        <h3>Temple des Pythons</h3>
+                        <p>Sanctuaire vaudou</p>
+                    </div>
+                </div>
+
+                <!-- Porte du Non-Retour -->
+                <div class="galerie-item fade-in" data-category="histoire">
+                    <img src="img/sites/porte-non-retour/1.jpg" alt="Porte du Non-Retour">
+                    <div class="galerie-overlay">
+                        <h3>Porte du Non-Retour</h3>
+                        <p>Mémorial de l'esclavage</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <img src="" alt="Image agrandie">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>EcoBénin</h4>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">Projet de valorisation de l'écotourisme communautaire au Bénin.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Réserver</a></li>
+                        <li><a href="mailto:contact@ecobenin.bj">contact@ecobenin.bj</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Filtres de galerie
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galerieItems = document.querySelectorAll('.galerie-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Retirer la classe active de tous les boutons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Ajouter la classe active au bouton cliqué
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galerieItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
